@@ -352,18 +352,3 @@ class E_RODNet(nn.Module):
         x = self.decoder(x, x1, x2)
         return x
 
-
-if __name__ == '__main__':
-
-    # output shape verify
-    input = torch.rand((1, 2, 16, 4, 128, 128)).cuda()
-    net = E_RODNet(SFF_channels=[4, 32], n_class=3).cuda()
-    output = net(input)
-    print(output.shape)
-
-    # FLOPs and params
-    flops, params = profile(net, inputs=(input,))
-    print("FLOPs=", str(flops / 1e9) + '{}'.format("G"))
-    print("params=", str(params / 1e6) + '{}'.format("M"))
-    print(parameter_count_table(net))
-
