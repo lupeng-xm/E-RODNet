@@ -1,0 +1,10 @@
+__pycache__/
+*.egg-info/
+*.so
+
+build/
+data/
+checkpoints/
+results/
+tmp/
+.idea/
