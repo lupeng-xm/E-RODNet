@@ -6,6 +6,8 @@ and has been extended to include descriptions of the E-RODNet.
 The following deployment process and other content are taken from the README.md file 
 of the [RODNet](https://github.com/yizhou-wang/RODNet).
 
+The model files and experimental results can be accessed by visiting [links](https://pan.baidu.com/s/10NaX_etkc0j2N4s59RsmSg?pwd=yhd6)
+
 ## Installation
 
 Clone RODNet code.
