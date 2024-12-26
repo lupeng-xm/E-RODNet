@@ -36,7 +36,7 @@ def data_augment(input_tensor, label_tensor):
         # Horizontally flip the input tensor
         input_tensor = torch.flip(input_tensor, dims=[5])  # T_RODNet: dim=[4]
         # Horizontally flip the label tensor
-        label_tensor = torch.flip(label_tensor, dims=[5])
+        label_tensor = torch.flip(label_tensor, dims=[4])
         return input_tensor, label_tensor
     # Randomly decide whether to add Gaussian noise
     elif 0.25 < dice <= 0.5:
@@ -53,7 +53,7 @@ def data_augment(input_tensor, label_tensor):
         # Horizontally flip the input tensor
         input_tensor = torch.flip(input_tensor, dims=[5])  # T_RODNet: dim=[4]
         # Horizontally flip the label tensor
-        label_tensor = torch.flip(label_tensor, dims=[5])
+        label_tensor = torch.flip(label_tensor, dims=[4])
         return input_tensor, label_tensor
     else:
         return input_tensor, label_tensor
