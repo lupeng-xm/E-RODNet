@@ -206,12 +206,8 @@ class RODEncode(nn.Module):
     def __init__(self, in_channels, depths=[2,2,4]):
         super(RODEncode, self).__init__()
         self.stem = nn.Sequential(
-            nn.Conv3d(in_channels=in_channels, out_channels=32,
+            nn.Conv3d(in_channels=in_channels, out_channels=64,
                       kernel_size=(9, 5, 5), stride=(2, 2, 2), padding=(4, 2, 2)),
-            nn.GroupNorm(num_groups=8, num_channels=32),
-            nn.GELU(),
-            nn.Conv3d(in_channels=32, out_channels=64,
-                      kernel_size=(9, 5, 5), stride=(1, 1, 1), padding=(4, 2, 2)),
             nn.GroupNorm(num_groups=16, num_channels=64),
             nn.GELU()
         )
